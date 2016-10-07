@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>商品管理</title>
+	<link rel="stylesheet" type="text/css" href="css/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="css/themes/icon.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="js/style.js"></script>
+</head>
+<body>
+	<h2>后台管理</h2>
+	<p><a href="../index2.html">返回首页</a></p>
+			<div data-options="region:'center'" style="padding:10px">
+<!----商品管理------>				
+			  <div class="row_1" id="goods">
+			        <table id="dg" title="商品管理" class="easyui-datagrid" style="width:100%;height:300px"
+			                 url="get_users.php"
+			                 toolbar="#toolbar" pagination="true"
+ 			                rownumbers="true" fitColumns="true" singleSelect="true">
+ 			                <thead>
+ 			                <tr>
+ 			                    <th field="picture" width="20%">图片</th>
+			                     <th field="name" width="15%">商品名称</th>
+			                     <th field="count" width="15%">价格</th>
+			                     <th field="count" width="15%">库存</th>
+ 			                    <th field="count" width="15%">销量</th>
+ 			                    <th field="other" width="20%">备注</th>
+ 			                </tr>
+  			           </thead>
+ 			        </table>
+ 			        <div id="toolbar">
+  			           <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="newUser()">添加商品</a>
+ 			            <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editUser()">修改商品</a>
+ 			            <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="destroyUser()">删除商品</a>
+ 			        </div>
+    
+			         <div id="dlg" class="easyui-dialog" style="width:400px"
+			                 closed="true" buttons="#dlg-buttons">
+			             <form id="fm" method="post" novalidate style="margin:0;padding:20px 50px">
+ 			                <div style="margin-bottom:20px;font-size:14px;border-bottom:1px solid #ccc">商品信息</div>
+            
+   			              <div style="margin-bottom:10px">
+  			                   <input name="picture" class="easyui-filebox" label="图片:" labelPosition="top" data-options="prompt:'Choose a file...'" style="width:100%">
+ 			                </div>
+			                 <div style="margin-bottom:10px">
+    			                 <input name="name" class="easyui-textbox" required="true" label="商品名称:" style="width:100%">
+   			              </div>
+  			               <div style="margin-bottom:10px">
+  			                   <input name="price" class="easyui-textbox" required="true" label="价格:￥" style="width:100%">
+  			               </div>
+  			               <div style="margin-bottom:10px">
+  			                   <input name="count1" class="easyui-textbox" required="true" label="库存:" style="width:100%">
+  			               </div>
+  			               <div style="margin-bottom:10px">
+   			                  <input name="count2" class="easyui-textbox" required="true" label="销量:" style="width:100%">
+    			             </div>
+      			           <div style="margin-bottom:10px">
+    			                 <input name="other" class="easyui-textbox" required="true" validType="other" label="备注:" style="width:100%">
+  			               </div>
+  			           </form>
+ 			        </div>
+			         <div id="dlg-buttons">
+ 			            <a href="javascript:void(0)" class="easyui-linkbutton c6" iconCls="icon-ok" onclick="saveUser()" style="width:90px">Save</a>
+			             <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#dlg').dialog('close')" style="width:90px">Cancel</a>
+ 			        </div>
+			</div>
+
+			</div>
+		
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>订单打分</title>
+
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/nav.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="css/carousel.css" rel="stylesheet">
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.js"></script>
+</head>
+<body>
+<script>  
+    $(function () {
+      $("#slider").responsiveSlides({
+      	auto: false,
+      	nav: true,
+      	speed: 500,
+        namespace: "callbacks",
+        pager: true,
+      });
+    });
+  </script>  
+<div class="banner-bg banner-sec">	
+	  <div class="container">
+			 <div class="header">
+			       <div class="logo">
+						 <a href="index2.html"><img src="images/logo.png" alt=""/></a>
+				   </div>							 
+				  <div class="top-nav">										 
+						<label class="mobile_menu" for="mobile_menu">
+						<span>Menu</span>
+						</label>
+					<input id="mobile_menu" type="checkbox">
+					   <ul class="nav">
+						  <li class="dropdown1"><a href=" ">服装</a>
+							  <ul class="dropdown2">
+									<li><a href=" ">男装</a></li>
+									<li><a href=" ">女装</a></li>
+									<li><a href=" ">童装</a></li>												
+							  </ul>
+						  </li>
+						  <li class="dropdown1"><a href=" ">食品</a>
+							 <ul class="dropdown2">
+									<li><a href=" ">生鲜</a></li>
+									<li><a href=" ">饼干</a></li>
+									<li><a href=" ">奶制品</a></li>
+									<li><a href=" ">巧克力</a></li>
+							  </ul>
+						 </li>      
+						 <li class="dropdown1"><a href=" ">生活用品</a>
+							 <ul class="dropdown2">
+									<li><a href=" ">洗浴用品</a></li>
+										<li><a href=" ">纸制品</a></li>
+										<li><a href=" ">晴雨伞</a></li>
+							  </ul>
+						 </li>     
+						 <li class="dropdown1"><a href="login.html">我的账户</a>
+							 <ul class="dropdown2">
+									<li><a href="collect.html">收藏夹</a></li>
+									<li><a href="order.html">订单</a></li>
+							  </ul>
+						 </li>
+						  <a class="shop" href="cart.html"><img src="images/cart.png" alt=""/></a>
+					  </ul>
+				 <div class="clearfix"></div>
+			   </div> 
+	         </div> 
+			
+		<div class="container-fluid  divsty1">
+		<div class="row-fluid">
+				<div class="page-header">
+					<h3>订单打分</h3>
+				</div>
+			<form method="post" action=" " enctype="multipart/form-data" class="col-md-8 col-md-offset-2">
+				
+				<div class="form-group">
+						<label for="upload">物流</label> <input type="number" placeholder="请输入数字1-5" name="mark1" value="5">
+				</div>
+				<div class="form-group">
+						<label for="upload">质量</label> <input type="number" placeholder="请输入数字1-5" name="mark2" value="5">
+				</div>
+				<div class="form-group">
+						<label for="upload">服务</label> <input type="number" placeholder="请输入数字1-5" name="mark3" value="5">
+				</div>
+				<input type="hidden" value="" name="CID">
+			   <input type="submit" class="btn btn-info" value="提交">
+			</form>
+		</div>
+	</div>
+	</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>购物车</title>
+
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/nav.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="css/carousel.css" rel="stylesheet">
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.js"></script>
+</head>
+<body class="bodysty">
+<script>  
+    $(function () {
+      $("#slider").responsiveSlides({
+      	auto: false,
+      	nav: true,
+      	speed: 500,
+        namespace: "callbacks",
+        pager: true,
+      });
+    });
+  </script>  
+<div class="banner-bg banner-sec">	
+	  <div class="container">
+			 <div class="header">
+			       <div class="logo">
+						 <a href="index2.html"><img src="images/logo.png" alt=""/></a>
+				   </div>							 
+				  <div class="top-nav">										 
+						<label class="mobile_menu" for="mobile_menu">
+						<span>Menu</span>
+						</label>
+					<input id="mobile_menu" type="checkbox">
+					   <ul class="nav">
+						  <li class="dropdown1"><a href=" ">服装</a>
+							  <ul class="dropdown2">
+									<li><a href=" ">男装</a></li>
+									<li><a href=" ">女装</a></li>
+									<li><a href=" ">童装</a></li>												
+							  </ul>
+						  </li>
+						  <li class="dropdown1"><a href=" ">食品</a>
+							 <ul class="dropdown2">
+									<li><a href=" ">生鲜</a></li>
+									<li><a href=" ">饼干</a></li>
+									<li><a href=" ">奶制品</a></li>
+									<li><a href=" ">巧克力</a></li>
+							  </ul>
+						 </li>      
+						 <li class="dropdown1"><a href=" ">生活用品</a>
+							 <ul class="dropdown2">
+									<li><a href=" ">洗浴用品</a></li>
+										<li><a href=" ">纸制品</a></li>
+										<li><a href=" ">晴雨伞</a></li>
+							  </ul>
+						 </li>     
+						 <li class="dropdown1"><a href="login.html">我的账户</a>
+							 <ul class="dropdown2">
+									<li><a href="collect.html">收藏夹</a></li>
+									<li><a href="order.html">订单</a></li>
+							  </ul>
+						 </li>
+						  <a class="shop" href="cart.html"><img src="images/cart.png" alt=""/></a>
+					  </ul>
+				 <div class="clearfix"></div>
+			   </div> 
+	         </div> 			
+			<table class="table table-striped table-bordered table-condensed order1">
+				<thead>
+					<tr>
+						<th> </th>
+						<th>商品</th>
+						<th>价格</th>
+						<th>数量</th>
+						<th>选择</th>
+					</tr>
+					<tr>
+						<td><a href=""><img class="" src="images/g002.jpg"
+					alt="Generic placeholder image width="140" height="140"" ></a></td>
+						<td>德芙巧克力</td>
+						<td>￥324</td>
+						<td>
+							 <input min="1" type="number" id="quantity" name="quantity" value="1" class="form-control input-small">
+						</td>
+						<td>
+							 <input type="checkbox" class="form-control input-small">
+						</td>
+					</tr>
+					<tr>
+						<td><a href=""><img class="" src="images/g002.jpg"
+					alt="Generic placeholder image width="140" height="140"" ></a></td>
+						<td>德芙巧克力</td>
+						<td>￥324</td>
+						<td>
+							 <input min="1" type="number" id="quantity" name="quantity" value="1" class="form-control input-small">
+						</td>
+						<td>
+							 <input type="checkbox" class="form-control input-small">
+						</td>
+					</tr>
+				</thead>
+			 </table>
+			 <a href="updatebook.jsp" class="btn btn-lg btn-success navbar-right">去下单</a>&nbsp;
+								<a href="../delbook" class="btn btn-lg navbar-right">删除</a>
+		</div>
+	</div>
+</body>
+</html>
